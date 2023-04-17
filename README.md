@@ -55,7 +55,7 @@ Describe your project
 :heavy_check_mark: 3. Viewing and completing courses, including the ability to track progress and obtain certificates.;\
 :heavy_check_mark: 4. The ability to communicate between users, including forums and chats.;\
 :heavy_check_mark: 5. Integration with payment systems for selling courses.;\
-:heavy_check_mark: 6. Analytics and reporting on user progress and course sales.;\
+:heavy_check_mark: 6. Analytics and reporting on user progress and course sales.;
 
 ## :rocket: Technologies
 
