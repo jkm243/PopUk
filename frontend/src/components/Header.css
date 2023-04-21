@@ -42,6 +42,7 @@ nav a {
     text-decoration: none;
     color: #333;
     position: relative;
+    font-weight: 600;
 }
 
 nav a::after {

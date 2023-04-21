@@ -1,0 +1,291 @@
+
+/* -----------------------------------------------Parametres géneraux----------------------------------------------------------------- */
+*{margin:0; padding: 0;}
+body{
+    font-family: Raleway Light;
+    background-image: url("../../assets/ap2.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+a{
+    cursor: pointer;
+    text-decoration: none;
+}
+input[type="text"], input[type="password"]{
+    cursor: text;
+}
+input[type="radio"], select{
+    cursor: pointer;
+}
+.loginbox h1{
+    padding: 2%;
+}
+/* Menu navigation & Effets de transition */
+
+.hamburger-menu{
+    margin: 0;
+    padding-top:1%;
+    padding-left:2%;
+    z-index: 20;
+    position: fixed;
+    cursor: pointer;
+}
+.hamburger-menu{
+    margin: 0;
+    padding-top:15px; 
+    z-index: 20;
+    position: fixed;
+}
+.barre{
+    width: 30px;
+    height: 3px;
+    background: white;
+    margin-top: 3px;
+}
+.barre1{
+    width: 30px;
+    height: 3px;
+    margin-top: 3px;    
+    background: white;
+    transition: transform 0.6s ease-in-out;
+    -moz-transition: transform 0.6s ease-in-out;
+    -webkit-transition: transform 0.6s ease-in-out;
+    -o-transition: transform 0.6s ease-in-out;
+    transform: translateY(0px) rotate(0deg);
+    -moz-transform: translateY(0px) rotate(0deg);
+    -o-transform: translateY(0px) rotate(0deg);
+    -webkit-transform: translateY(0px) rotate(0deg);
+}
+.barre2{
+    width: 30px;
+    height: 3px;
+    margin-top: 3px;    
+    background: white;
+    transition: transform 0.6s ease-in-out;
+    -moz-transition: transform 0.6s ease-in-out;
+    -webkit-transition: transform 0.6s ease-in-out;
+    -o-transition: transform 0.6s ease-in-out;
+}
+.barre3{
+    width: 30px;
+    height: 3px;
+    margin-top: 3px;    
+    background: white;
+    transition: transform 0.6s ease-in-out;
+    -moz-transition: transform 0.6s ease-in-out;
+    -webkit-transition: transform 0.6s ease-in-out;
+    -o-transition: transform 0.6s ease-in-out;
+    transform: translateY(0px) rotate(0deg);
+    -moz-transform: translateY(0px) rotate(0deg);
+    -o-transform: translateY(0px) rotate(0deg);
+    -webkit-transform: translateY(0px) rotate(0deg);
+}
+.barre3.isActive{
+    transform: translateY(-4px) rotate(-45deg);
+    -moz-transform: translateY(-4px) rotate(-45deg);
+    -o-transform: translateY(-4px) rotate(-45deg);
+    -webkit-transform: translateY(-4px) rotate(-45deg);
+}
+.barre2.isActive{
+    transform: translateX(-60px); 
+    -moz-transform: translateX(-60px);
+    -o-transform: translateX(-60px);
+    -webkit-transform: translateX(-60px);
+}
+.barre1.isActive{
+    transform: translateY(4px) rotate(45deg);
+    -moz-transform: translateY(4px) rotate(45deg);
+    -o-transform: translateY(4px) rotate(45deg);
+    -webkit-transform: translateY(4px) rotate(45deg);
+}
+/* Navigation */
+.navigation{
+    padding:0 30px;
+    width: 20%;
+    height: 100%;
+    background-color: #3a3a3a;
+    position: fixed;
+    z-index: 19;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    transition: transform 0.6s ease-in-out;
+    -webkit-transition: transform 0.6s ease-in-out;
+    -moz-transition: transform 0.6s ease-in-out;
+    -o-transition: transform 0.6s ease-in-out;
+    transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    -moz-transform: translateX(-100%);
+    -o-transform: translateX(-100%);
+    opacity: 0.5;
+}
+.navigation.isOpen{
+    transform: translateX(0%);
+    -webkit-transform: translateX(0%); 
+    -moz-transform: translateX(0%);
+    -o-transform: translateX(0%);
+}
+.navigation ul{
+    position: absolute;
+    top: 30%;
+    left: 20%;
+}
+.navigation ul li{
+    display: block;
+    padding: 8% 0%;
+    text-align: center;
+    transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+}
+.navigation ul li a{
+    color: white;
+    text-decoration: none;
+}
+.navigation ul li a:hover{
+    color: #fd7328;
+}
+    
+.navigation ul li:hover{
+    color: #fd7328;
+    transform: scale(1.2);
+}
+
+.logoAv{
+    width: 10%;
+    border-radius: 50%;
+    position: absolute;
+    top: 10px;
+    left: calc(50% - 5%);
+    box-shadow: #3a3a3a;
+    margin: 10% 0%;
+    z-index: 2;
+    transition: all 0.5s ease;
+}
+.logoAv:hover{
+    transform: scale(0.8);
+    box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.08);
+}
+#message{
+    width: 100%;
+    height: 100%;
+    background-color: #fd7328;
+    color: white;
+}
+.inscbox h1,h2,h3{
+    padding: 2% 0%;
+}
+.inscbox{
+    background-color: #5858589c;
+    color: #fff;
+    border: 2px solid #fd7328;
+    position: absolute;
+    border-radius: 30px;
+    margin: 15% 20% 10% 20%;
+    padding: 6% 1% 5% 10%;
+    z-index: 1;
+}
+.inscbox form{
+    clear: both;
+}
+.inscbox div{
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+}
+.inscbox p{
+    font-size: 0.8em;
+}
+.inscbox input{
+    margin-bottom: 20px;
+}
+.inscbox input[type="text"]{
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 15px;
+    width: 80%;
+    color: #fd7328;
+}
+.inscbox input[type="email"]{
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 15px;
+    width: 80%;
+    color: #fd7328;
+}
+.inscbox input[type="password"]{
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 15px;
+    width: 80%;
+    color: #fd7328;
+}
+.inscbox input[type="radio"]{
+    margin: 1%;
+}
+.inscbox select{
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 25px;
+    width: 80%;
+    margin-bottom: 5%;
+    color: black;
+}
+.inscbox input[type="password"]{
+    height: 15px;
+}
+.inscbox input[type="tel"]{
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 30px;
+    color: #fd7328;
+}
+.inscbox input[type="submit"]{
+    border: none;
+    outline: none;
+    width: 100%; 
+    height: 40px;
+    background: #c75a1f;
+    color: white;
+    font-size: 1.5em;
+    border-radius: 20px;
+    margin: 0%;
+    clear: both;
+    transition: all 1s ease;
+}
+.inscbox input[type="submit"]:hover{
+    cursor: pointer;
+    background: #fff;
+    color: #3a3a3a;
+    transform: scale(1.1);
+    box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.08);
+}
+.inscbox a{
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 20px;
+    color: darkgrey;
+}
+.inscbox a:hover{
+    color:white;
+}
+.save{
+    padding: 2% 1% 0% 1%;
+    margin: 2% 0%;
+    clear: both;
+    width: 80%;
+}
+.formulaire{
+
+}

@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import logo from "../assets/logo1.png";
+import { Link } from 'react-router-dom';
 import "./Header.css";
+import '../styles/animations.css'
 
 function Header() {
   const [showBackground, setShowBackground] = useState(false);
@@ -22,9 +24,11 @@ function Header() {
 
   return (
     <div className={`header ${showBackground && "header__background"}`}>
-      <header>
+      <header className="fadeInDown">
         <div className="logo">
-          <img src={logo} alt="Logo"/>
+        <Link to='/'>
+            <img src={logo} className="home-logo" alt="Logo" />
+        </Link>
         </div>
         <nav>
           <ul className="nav-links">
@@ -35,10 +39,6 @@ function Header() {
           </ul>
           
         </nav>
-        {/* <div className="auth-buttons">
-          <button className="btn-login">Connexion</button>
-          <button className="btn-signup">Inscription</button>
-        </div> */}
         <div className="burger">
           <div className="line1"></div>
           <div className="line2"></div>
